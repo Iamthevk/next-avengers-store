@@ -12,44 +12,42 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>Avengers Shop</h1>
+        <p className={styles.description}>The best avengers swag on the web!</p>
 
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <ul className={styles.grid}>
+          <li className={styles.card}>
+            <a href="https://nextjs.org/learn">
+              <img src="/images/hulk_tee.jpeg" alt="avenger tshirt" />
+              <h2>Avengers Tshirts</h2>
+              <p>
+                Bring cosmo the avengers to your wardrobe with this high quality
+                tshirt.
+              </p>
+            </a>
+          </li>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <li className={styles.card}>
+            <a href="https://nextjs.org/learn">
+              <img src="/images/hulk-sticker.jpeg" alt="avenger tshirt" />
+              <h2>Avengers Stickers</h2>
+              <p>
+                Add some flare to your laptop with a sticker of cosmo the
+                avengers
+              </p>
+            </a>
+          </li>
+          <li className={styles.card}>
+            <a href="https://github.com/vercel/next.js/tree/canary/examples">
+              <img src="/images/tee+sticker.jpeg" alt="avenger tshirt" />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+              <h2>Avengers Combo</h2>
+              <p>
+                Show your love for cosmo with a tshirt and sticker combo pack.
+              </p>
+            </a>
+          </li>
+        </ul>
       </main>
 
       <footer className={styles.footer}>

@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Avengers Tshirts",
+        "description" : "Bring cosmo the avengers to your wardrobe with this high quality tshirt.",
+        "image" : "/images/hulk-tee.jpeg",
+        "price" : 3000
+    },
+    {
+        "title": "Avengers Sticker",
+        "description" : " Add some flare to your laptop with a sticker of cosmo the avengers",
+        "image" : "/images/hulk-sticker.jpeg",
+        "price" : 1000
+    },
+    {
+        "title": "Avengers combo",
+        "description" : "Show your love for cosmo with a tshirt and sticker combo pack.",
+        "image" : "/images/tee-sticker.jpeg",
+        "price" : 1000
+    }
+
+]

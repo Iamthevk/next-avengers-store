@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Product from "../products.json";
+import products from "../products.json";
 export default function Home() {
-  console.log(Product);
+  console.log(products);
   return (
     <div className={styles.container}>
       <Head>
@@ -17,37 +17,19 @@ export default function Home() {
         <p className={styles.description}>The best avengers swag on the web!</p>
 
         <ul className={styles.grid}>
-          <li className={styles.card}>
-            <a href="https://nextjs.org/learn">
-              <img src="/images/hulk_tee.jpeg" alt="avenger tshirt" />
-              <h2>Avengers Tshirts</h2>
-              <p>
-                Bring cosmo the avengers to your wardrobe with this high quality
-                tshirt.
-              </p>
-            </a>
-          </li>
-
-          <li className={styles.card}>
-            <a href="https://nextjs.org/learn">
-              <img src="/images/hulk-sticker.jpeg" alt="avenger tshirt" />
-              <h2>Avengers Stickers</h2>
-              <p>
-                Add some flare to your laptop with a sticker of cosmo the
-                avengers
-              </p>
-            </a>
-          </li>
-          <li className={styles.card}>
-            <a href="https://github.com/vercel/next.js/tree/canary/examples">
-              <img src="/images/tee+sticker.jpeg" alt="avenger tshirt" />
-
-              <h2>Avengers Combo</h2>
-              <p>
-                Show your love for cosmo with a tshirt and sticker combo pack.
-              </p>
-            </a>
-          </li>
+          {products.map((product, i) => {
+            const { title, image, price, description } = product;
+            return (
+              <li key={i} className={styles.card}>
+                <a href="https://nextjs.org/learn">
+                  <img src={image} alt={title} />
+                  <h2>{title}</h2>
+                  <p>₹ {price}</p>
+                  <p>{description}</p>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </main>
 

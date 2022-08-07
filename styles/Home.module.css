@@ -128,3 +128,16 @@
     filter: invert(1);
   }
 }
+
+.button {
+  color: white;
+  background-color: blueviolet;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.8em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  border: 0;
+  padding: 0.8em 1.4em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}

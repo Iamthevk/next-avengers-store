@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import products from "../products.json";
+import { initiateCheckout } from "../lib/payments";
+
 export default function Home() {
-  console.log(products);
   return (
     <div className={styles.container}>
       <Head>
@@ -17,16 +18,33 @@ export default function Home() {
         <p className={styles.description}>The best avengers swag on the web!</p>
 
         <ul className={styles.grid}>
-          {products.map((product, i) => {
-            const { title, image, price, description } = product;
+          {products.map((product) => {
+            const { id, title, image, price, description } = product;
             return (
-              <li key={i} className={styles.card}>
+              <li key={id} className={styles.card}>
                 <a href="https://nextjs.org/learn">
-                  <img src={image} alt={title} />
+                  <Image src={image} alt={title} width="270" height="300" />
                   <h2>{title}</h2>
                   <p>₹ {price}</p>
                   <p>{description}</p>
                 </a>
+                <p>
+                  <button
+                    className={styles.button}
+                    onClick={() =>
+                      initiateCheckout({
+                        lineItems: [
+                          {
+                            price: Id,
+                            quantity: 1,
+                          },
+                        ],
+                      })
+                    }
+                  >
+                    Buy Now
+                  </button>
+                </p>
               </li>
             );
           })}
